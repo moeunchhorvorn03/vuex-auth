@@ -10,7 +10,6 @@ const store = createStore({
     mutations: {
         setUser(state, payload) {
             state.user = payload
-            console.log('user state change: ', state.user)
         },
         setAuthIsReady(state, payload) {
             state.authIsReady = payload
@@ -18,8 +17,6 @@ const store = createStore({
     },
     actions: {
         async signup(context, { email, password }) {
-            console.log('signup action')
-
             const response = await createUserWithEmailAndPassword(get_Auth, email, password)
             if(response) {
                 context.commit('setUser', response.user)
@@ -28,8 +25,6 @@ const store = createStore({
             }
         },
         async login(context, { email, password }) {
-            console.log('login action')
-
             const response = await signInWithEmailAndPassword(get_Auth, email, password)
             if(response) {
                 context.commit('setUser', response.user)
@@ -38,8 +33,6 @@ const store = createStore({
             }
         },
         async logout(context) {
-            console.log('logout action');
-            
             await signOut(get_Auth)
             context.commit('setUser', null)
         }

@@ -48,6 +48,25 @@ button {
 .blog p {
   color: #999;
 }
+<!-- transition --
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .blog h3 {
   color: #116530;
 }
@@ -76,4 +95,22 @@ label {
 form button {
   display: block;
   margin-top: 20px;
+}
+table{
+  border: 1px solid #116530;
+  width: 100%; 
+  text-align: center; 
+  padding: 6px;
+  background-color: #42865c;
+}
+tr{
+  border-bottom: 1px solid #116530;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.input{
+  display: flex;
+  justify-content: space-between;
 }

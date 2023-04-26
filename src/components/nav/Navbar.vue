@@ -3,8 +3,9 @@
     <h1>Lacasto Alexis</h1>
     <!-- for all users -->
     <tamplate v-if="$store.state.authIsReady">
-      <span>
+      <span v-if="$store.state.user">
         <router-link to="/">Home</router-link>
+        <router-link to="/dashboard">Dashboard</router-link>
       </span>
       <!-- for logged in users -->
       <span v-if="$store.state.user">

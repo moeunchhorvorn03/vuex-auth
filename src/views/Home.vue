@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Madal from '../components/Madal.vue'
+import Madal from '../components/madal/Madal.vue'
 
 export default {
   components: {
